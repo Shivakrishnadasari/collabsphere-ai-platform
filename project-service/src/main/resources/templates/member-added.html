@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"/><title>Added to Project</title></head>
+<body style="margin:0;padding:0;background:#0c0c0f;font-family:'Segoe UI',sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
+  <tr><td align="center">
+    <table width="560" cellpadding="0" cellspacing="0" style="background:#111116;border:1px solid #2a2a38;border-radius:16px;overflow:hidden;">
+      <tr>
+        <td style="background:linear-gradient(135deg,#10b981,#6366f1);padding:32px;text-align:center;">
+          <div style="font-size:36px;margin-bottom:8px;">🎉</div>
+          <h1 style="margin:0;color:#fff;font-size:22px;font-weight:800;">You're in the team!</h1>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:32px;">
+          <p style="color:#9090b0;font-size:15px;margin:0 0 16px;">
+            Hi <strong style="color:#e8e8f0;" th:text="${memberName}">User</strong>,
+          </p>
+          <p style="color:#9090b0;font-size:15px;margin:0 0 24px;line-height:1.6;">
+            <strong style="color:#e8e8f0;" th:text="${addedByName}">Someone</strong>
+            added you to
+            <strong style="color:#e8e8f0;" th:text="${projectName}">Project</strong>.
+          </p>
+          <div style="background:#18181f;border:1px solid #2a2a38;border-radius:12px;padding:20px;margin-bottom:28px;">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#10b981;margin-bottom:8px;">YOUR ROLE</div>
+            <span style="display:inline-block;background:rgba(16,185,129,.15);color:#10b981;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:700;text-transform:uppercase;" th:text="${role}">MEMBER</span>
+          </div>
+          <div style="text-align:center;">
+            <a th:href="${projectUrl}" style="display:inline-block;background:#10b981;color:#fff;text-decoration:none;padding:12px 32px;border-radius:10px;font-weight:700;font-size:14px;">
+              Open Project →
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:16px 32px;border-top:1px solid #2a2a38;text-align:center;">
+          <p style="margin:0;color:#5a5a78;font-size:12px;">
+            CollabSphere · <a th:href="${appUrl}" style="color:#6366f1;text-decoration:none;">Open App</a>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>
